@@ -7,14 +7,14 @@
 const fs = require('fs');
 const path = require('path');
 const componentGenerator = require('./component/index.js');
-const componentSharedGenerator = require('./shared/index.js');
+const sharedComponentGenerator = require('./shared/index.js');
 const containerGenerator = require('./container/index.js');
 const routeGenerator = require('./route/index.js');
 const languageGenerator = require('./language/index.js');
 
 module.exports = (plop) => {
   plop.setGenerator('component', componentGenerator);
-  plop.setGenerator('sharedComponent', componentSharedGenerator);
+  plop.setGenerator('sharedComponent', sharedComponentGenerator);
   plop.setGenerator('container', containerGenerator);
   plop.setGenerator('route', routeGenerator);
   plop.setGenerator('language', languageGenerator);
