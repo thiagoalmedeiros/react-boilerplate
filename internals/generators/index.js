@@ -23,10 +23,10 @@ module.exports = (plop) => {
       fs.accessSync(path.join(__dirname, `../../app/containers/${comp}`), fs.F_OK);
       return `containers/${comp}`;
     } catch (e) {
-      try{
+      try {
         fs.accessSync(path.join(__dirname, `../../app/components/${comp}`), fs.F_OK);
         return `components/${comp}`;
-      }catch (e) {
+      } catch (f) {
         return `components/shared/${comp}`;
       }
     }
